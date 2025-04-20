@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name | Azure Data Engineer</title>
+  <title>Ashok Kumar Alamanda | Azure Data Engineer</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * {
@@ -11,95 +11,172 @@
       font-family: 'Inter', sans-serif;
     }
     body {
-      background: #f4f6f8;
+      background: linear-gradient(to right, #e0eafc, #cfdef3);
       color: #333;
       line-height: 1.6;
-      padding: 2rem;
+      transition: background 0.5s ease, color 0.5s ease;
+    }
+    .dark-mode {
+      background: #1a1a1a;
+      color: #e0e0e0;
     }
     header {
-      text-align: center;
-      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 2rem 2rem;
+      background: #0078d4;
+      color: white;
+      transition: background 0.5s ease;
+    }
+    .dark-mode header {
+      background: #003366;
     }
     header img {
-      width: 120px;
-      height: 120px;
+      width: 160px;
+      height: 160px;
       object-fit: cover;
       border-radius: 50%;
-      margin-bottom: 1rem;
+      border: 4px solid white;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      margin-right: 2rem;
     }
     header h1 {
       font-size: 2.5rem;
-      color: #0078d4;
+      margin-bottom: 0.5rem;
     }
     header p {
       font-size: 1.2rem;
-      color: #555;
+    }
+    .intro-text {
+      max-width: 600px;
     }
     section {
-      max-width: 800px;
+      max-width: 1000px;
       margin: 2rem auto;
       background: white;
       padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: background 0.5s ease;
+    }
+    .dark-mode section {
+      background: #2c2c2c;
     }
     h2 {
       color: #0078d4;
       margin-bottom: 1rem;
     }
+    .dark-mode h2 {
+      color: #66ccff;
+    }
     ul {
       margin-left: 1.5rem;
+      list-style: disc;
     }
     a {
       color: #0078d4;
       text-decoration: none;
     }
+    a:hover {
+      text-decoration: underline;
+    }
     footer {
       text-align: center;
-      margin-top: 3rem;
+      padding: 2rem;
+      background: #f1f1f1;
       color: #777;
+      transition: background 0.5s ease;
+    }
+    .dark-mode footer {
+      background: #111;
+      color: #aaa;
+    }
+    .project-img {
+      width: 100%;
+      height: auto;
+      margin-top: 1rem;
+      border-radius: 8px;
+    }
+    button {
+      margin-top: 1rem;
+      background-color: #0078d4;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #005fa3;
+    }
+    .theme-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      background-color: #0078d4;
+      color: white;
+      border: none;
+      cursor: pointer;
+      z-index: 1000;
+    }
+    .theme-toggle:hover {
+      background-color: #005fa3;
     }
   </style>
 </head>
 <body>
+  <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+
   <header>
     <img src="IMG_20240423_110854.jpg" alt="Profile Image" />
-    <h1>ASHOK KUMAR ALAMANDA</h1>
-    <p>Azure Data Engineer | SQL • Python • PySpark</p>
+    <div class="intro-text">
+      <h1>Ashok Kumar Alamanda</h1>
+      <p>Azure Data Engineer | SQL • Python • PySpark</p>
+    </div>
   </header>
 
   <section>
     <h2>About Me</h2>
-    <p>I’m a System Engineer at TCS with 3+ years of experience in data operations and backend systems. Currently transitioning into Azure Data Engineering with a strong focus on data pipelines, big data, and cloud solutions.</p>
+    <p>I’m a System Engineer at TCS with over 3 years of experience in data operations, backend systems, and warehouse management. I'm currently transitioning into Azure Data Engineering, with a strong focus on building data pipelines, leveraging big data tools, and implementing scalable cloud-based solutions.</p>
+    <button onclick="alert('Thank you for learning more about me!')">Say Hello</button>
   </section>
 
   <section>
     <h2>Skills</h2>
     <ul>
-      <li>SQL, Python, PySpark</li>
-      <li>Azure Data Factory, Azure Data Lake, Azure Synapse</li>
-      <li>SQL Server, DBMS, ETL</li>
-      <li>Power BI (Basics), Excel</li>
+      <li>Programming: SQL, Python, PySpark</li>
+      <li>Azure Stack: Data Factory, Data Lake, Synapse Analytics, Blob Storage</li>
+      <li>Database: SQL Server, Oracle DB, DBMS</li>
+      <li>Tools: Power BI (Basics), Excel, Git, JIRA</li>
+      <li>ETL: SSIS, Informatica (Basics), Data Mapping & Cleansing</li>
     </ul>
   </section>
 
   <section>
     <h2>Projects</h2>
     <h3>1. Azure Data Pipeline</h3>
-    <p>Built an end-to-end data pipeline using Azure Data Factory, Data Lake, PySpark, and SQL. Processed raw files into structured reporting tables.</p>
+    <p>Built a complete data pipeline with Azure Data Factory, Data Lake, PySpark and SQL to process raw CSV files into structured tables for reporting.</p>
+    <img class="project-img" src="https://learn.microsoft.com/en-us/azure/data-factory/media/concepts-pipelines-activities/pipeline-concept.png" alt="Azure Data Pipeline" />
 
     <h3>2. JDA WMS Reporting Automation</h3>
-    <p>Automated reporting from SQL Server to Excel using Python scripts, improving efficiency and reducing manual effort.</p>
+    <p>Designed a reporting automation tool that fetches data from SQL Server, formats it using Python, and exports to Excel, eliminating manual processes.</p>
+    <img class="project-img" src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*RlAxOBzCfrOyB-3jYx1D6A.png" alt="Automation Flow" />
 
     <h3>3. ZIP Code Demographics Analysis</h3>
-    <p>Analyzed U.S. ZIP-level data using Power BI and Python. Visualized population, income, and density data trends.</p>
+    <p>Used Python and Power BI to clean and visualize ZIP-level demographic data. Delivered dashboards that highlight population and income trends.</p>
+    <img class="project-img" src="https://datavizcatalogue.com/methods/images/top_images/choropleth_map.png" alt="ZIP Analysis" />
   </section>
 
   <section>
     <h2>Certifications</h2>
     <ul>
-      <li>Azure Data Engineer Associate (Planned)</li>
-      <li>TCS Internal Trainings (SQL, ETL)</li>
+      <li>Azure Data Engineer Associate (in progress)</li>
+      <li>TCS Internal Trainings on SQL, ETL, Python</li>
+      <li>Udemy: Azure Data Engineering Masterclass</li>
     </ul>
   </section>
 
@@ -108,11 +185,27 @@
     <p>Email: your.email@example.com</p>
     <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
     <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
+    <button onclick="window.location.href='mailto:your.email@example.com'">Email Me</button>
   </section>
 
   <footer>
-    <p>Made with ❤️ by Your Name</p>
+    <p>Made with ❤️ by Ashok Kumar Alamanda</p>
   </footer>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark-mode');
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const nameHeader = document.querySelector("header h1");
+      nameHeader.addEventListener("mouseover", () => {
+        nameHeader.style.color = "#ffcc00";
+      });
+      nameHeader.addEventListener("mouseout", () => {
+        nameHeader.style.color = "white";
+      });
+    });
+  </script>
 </body>
 </html>
-
